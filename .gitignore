@@ -1,5 +1,11 @@
 # 
 *.txt
+*.docx
+*.doc
+*.xlsx
+*.docm
+*.ppt
+*.pptx
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
