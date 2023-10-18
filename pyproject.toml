@@ -11,6 +11,7 @@ flet = "^0.20.2"
 xlsxwriter = "^3.1.8"
 httpx = "^0.25.0"
 bs4 = "^0.0.1"
+html5lib = "^1.1"
 
 [build-system]
 requires = ["poetry-core"]
