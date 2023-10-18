@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nome": "ciclano",
+        "telefone": "614235-6789"
+    },
+    {
+        "id": 2,
+        "nome": "fulano",
+        "telefone": "617546-4512"
+    },
+    {
+        "id": 3,
+        "nome": "beltrano",
+        "telefone": "621427-7546"
+    },
+    {
+        "id": 4,
+        "nome": "jos\u00e9 da silva",
+        "telefone": "614215-7645"
+    },
+    {
+        "id": 5,
+        "nome": "jo\u00e3o da silva",
+        "telefone": "617777-7777"
+    },
+    {
+        "id": 6,
+        "nome": "",
+        "telefone": ""
+    }
+]
