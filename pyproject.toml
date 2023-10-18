@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.10"
 flet = "^0.20.2"
 xlsxwriter = "^3.1.8"
+httpx = "^0.25.0"
+bs4 = "^0.0.1"
 
 [build-system]
 requires = ["poetry-core"]
