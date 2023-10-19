@@ -1,27 +1,29 @@
 import httpx
 from bs4 import BeautifulSoup
 from pathlib import Path
+from typing import Container
 
 
-def get_content(url: str) -> list:
+def get_content(url: str) -> Container:
     """Donwload content web."""
 
     req = httpx.get(url)
     content = req.text
     soup = BeautifulSoup(content, 'html5lib')
     result = soup.select_one('div.corpo_texto_noticia').contents
-    result = [line for line in result if line and isinstance(line, str)]
+    result = [line.strip() for line in result if line and isinstance(line, str)]
     # print(result)
     return result
 
-def write_content(fout: str, content: list) -> bool:
-    soup = BeautifulSoup('', 'html5lib', from_encoding='iso8859-1')
+def write_content(fout: str, content: Container) -> bool:
+    soup = BeautifulSoup('', 'html5lib')
     for line in content:
-        p = soup.new_tag('p')
-        p.string = line
-        soup.html.body.append(p)
-    print(soup)
-    Path(fout).write_text(soup.text)
+        if line:
+            p = soup.new_tag('p')
+            p.string = line
+            soup.html.body.append(p)
+    print(soup.prettify())
+    Path(fout).write_bytes(soup.prettify(encoding='utf-8'))
     return True
 
 
