@@ -22,11 +22,28 @@ def main(page: ft.Page):
             ),
             ft.Dropdown(
                 width="max",
-                label="Tipo"
+                label="Tipo",
+                options=[
+            ft.dropdown.Option('CONSTITUIÇÃO'),
+            ft.dropdown.Option('DECRETO'),
+            ft.dropdown.Option('DECRETO EXECUTIVO'),
+            ft.dropdown.Option('DECRETO NÃO NUMERADO'),
+            ft.dropdown.Option('DECRETO-LEI'),
+            ft.dropdown.Option('EMENDA CONSTITUCIONAL'),
+            ft.dropdown.Option('LEI'),
+            ft.dropdown.Option('LEI COMPLEMENTAR'),
+            ft.dropdown.Option('LEI ORDINÁRIA'),
+            ft.dropdown.Option('MEDIDA PROVISÓRIA'),
+            ft.dropdown.Option('RESOLUÇÃO'),
+            ],
             ),
             ft.Dropdown(
                 width="max",
-                label="Situação"
+                label="Situação",
+                options=[
+            ft.dropdown.Option('NÃO CONSTA REVOGAÇÃO EXPRESSA'),
+            ft.dropdown.Option('REVOGADO'),
+                ],
             )
         ]
         )
@@ -42,13 +59,7 @@ def main(page: ft.Page):
             alignment=ft.MainAxisAlignment.CENTER
         )
 
-    resultados=ft.Container(
-        ft.Row(
-            controls=(
-                ft.Text(value="Resultados: 0"),
-                ),
-        ),
-    )
+    resultados=ft.Text(value="Resultados: 0", text_align="right")
 
     page.add(
         campos,
