@@ -10,6 +10,8 @@ def main(page: ft.Page):
     """"""
     page.title = 'Sobre'
 
+    page.scroll = ft.ScrollMode.AUTO
+
     page.appbar = ft.AppBar(
         title=ft.Text(
         "Sobre", weight=ft.FontWeight.BOLD, color="white"
@@ -53,7 +55,7 @@ def main(page: ft.Page):
         "\n\nSão disponibilizados no aplicativo os atos assinados por" 
         " Presidentes da República – Leis Ordinárias, Leis Complementares,"
         " Leis Delegadas, Medidas Provisórias e Decretos.",
-        size=20
+        size=30
     )
 
     page.add(content)
