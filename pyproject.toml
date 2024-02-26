@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "treinamento"
+version = "0.0.2a0"
+description = ""
+authors = ["Gustavo dos Santos Ribeiro <gustavo.ribeiro@presidencia.gov.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flet = "^0.20.2"
