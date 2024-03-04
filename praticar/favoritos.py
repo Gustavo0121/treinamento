@@ -4,7 +4,7 @@ Página de ajuda.
 """
 
 import flet as ft
-
+from pathlib import Path
 
 def main(page: ft.Page):
     """Run this app."""
@@ -16,12 +16,16 @@ def main(page: ft.Page):
         ),
         bgcolor='#3b65ad',
         center_title=True,
-        actions=[ft.IconButton(
-            ft.icons.MENU,
-            tooltip='Menu',
-            icon_color='black',
+        leading=ft.Image(src=Path(__file__).parent.joinpath('icons/swiperight.png').as_posix()),
+        leading_width=40,
+        actions=[
+            ft.IconButton(
+                ft.icons.MENU,
+                tooltip='Menu',
+                icon_color='black',
+                on_click=lambda e: print(Path(__file__).parent.joinpath('icons/swiperight.png')),
             ),
-            ]
+        ]
     )
 
     page.navigation_bar = ft.NavigationBar(
@@ -45,7 +49,23 @@ def main(page: ft.Page):
         size=30
     )
 
-    icon=ft.icons.MOBILE_SCREEN_SHARE
+    icon_right=ft.ResponsiveRow(
+            [
+                ft.Image(
+                src='/images/swiperight.png', height=100, col=5
+                ),
+            ],
+            columns=10
+        )
+
+    icon_left=ft.ResponsiveRow(
+            [
+                ft.Image(
+                src='/images/swipeleft.png', height=100, col=5
+                ),
+            ],
+            columns=10
+        )
 
     conteudo2=ft.Text(
         value="\nUma vez favoritada, a legislação fica listada aqui e pode ser"
@@ -56,7 +76,10 @@ def main(page: ft.Page):
 
     page.add(
         conteudo1,
+        # ft.Image(src="/images/swipeleft.png"),
+        icon_right,
         conteudo2,
+        icon_left
     )
 
 
