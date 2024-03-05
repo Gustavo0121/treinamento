@@ -7,7 +7,7 @@ def main(page: ft.Page):
     page2 = ft.Container(
         ft.Column(
             controls=[
-                ft.Text(value="Busca Avançada", size=25, text_align="left"), 
+                ft.Text(value="Busca Avançada", size=25, text_align="left"),
                 ft.Text(value="Constituição", size=25, text_align="left"),
                 ft.Text(value="Códigos", size=25, text_align="left"),
                 ft.Text(value="Estatutos", size=25, text_align="left"),
@@ -40,12 +40,35 @@ def main(page: ft.Page):
         page2.update()
 
     page.appbar = ft.AppBar(
-        title=ft.Text(
-        "Planalto Legis", weight=ft.FontWeight.BOLD, color="black"
-        ),
-        bgcolor="blue",
-        center_title=True,
-        actions=[ft.IconButton(ft.icons.MENU, tooltip="Menu", icon_color="black", on_click=animate)]
+            title=ft.Text(
+                'Planalto Legis',
+                weight=ft.FontWeight.BOLD,
+                color='white',
+            ),
+            bgcolor='#3b65ad',
+            center_title=True,
+            actions=[
+            ft.IconButton(
+                ft.icons.MENU,
+                tooltip='Menu',
+                icon_color='white',
+                on_click=animate
+            ),
+        ],
+        )
+
+    page.navigation_bar = ft.NavigationBar(
+        destinations=[
+            ft.NavigationDestination(
+                icon=ft.icons.CALENDAR_MONTH_ROUNDED, label='RESENHA'
+            ),
+            ft.NavigationDestination(icon=ft.icons.LOUPE, label='BUSCA'),
+            ft.NavigationDestination(
+                icon=ft.icons.STAR_PURPLE500_OUTLINED, label='FAVORITOS'
+            ),
+            ft.NavigationDestination(icon=ft.icons.HELP, label='AJUDA'),
+        ],
+        bgcolor=ft.colors.WHITE,
     )
 
     page.add(page2)
