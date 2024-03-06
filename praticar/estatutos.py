@@ -1,16 +1,13 @@
-"""
-Página de ajuda.
+"""Page Estatutos."""
 
-"""
-from pathlib import Path
 import logging
+from pathlib import Path
 import flet as ft
 
 BLUE = '#0060B5'
-
-def main(page: ft.Page):
+def main(page: ft.Page) -> None:
     """Run this app."""
-    page.title = 'Planalto Legis'
+    page.title = 'Estatutos'
 
     page.scroll = ft.ScrollMode.AUTO
     
@@ -21,7 +18,7 @@ def main(page: ft.Page):
             src=Path('images', 'icons', 'icon-nobg-1024.png').as_posix(),
         ),
         leading_width=40,
-        title=ft.Text('Códigos', weight=ft.FontWeight.W_500),
+        title=ft.Text('Estatutos', weight=ft.FontWeight.W_500),
         center_title=True,
         actions=[
             ft.PopupMenuButton(
@@ -97,31 +94,31 @@ def main(page: ft.Page):
         content=(
             ft.Column(
                 [
-                    ft.Text(value='Reúnem, em uma única Lei, normas de um mesmo ramo de direito.', size=25),
-                    ft.Text(value='Código Civil', color=BLUE, size=35),
-                    ft.Text(value='LEI N° 10.406, DE 10 DE JANEIRO DE 2002.', size=25),
+                    ft.Text(value='Estatuto da Advocacia e da Ordem dos Advogados do Brasil', color=BLUE, size=35),
+                    ft.Text(value='LEI N° 8.906, DE 4 DE JULHO DE 1994.', size=25),
                     ft.Divider(),
-                    ft.Text(value='Código de Processo Civil', color=BLUE, size=35),
-                    ft.Text(value='LEI N° 5.869, DE 11 DE JANEIRO DE 1973.', size=25),
+                    ft.Text(value='Estatuto da Criança e do Adolescente', color=BLUE, size=35),
+                    ft.Text(value='LEI N° 8.069, DE 13 DE JULHO DE 1990.', size=25),
                     ft.Divider(),
-                    ft.Text(value='Código de Processo Civil', color=BLUE, size=35),
-                    ft.Text(value='LEI N° 13.105, DE 16 DE MARÇO DE 2015.', size=25),
+                    ft.Text(value='Estatuto da Cidade', color=BLUE, size=35),
+                    ft.Text(value='LEI N° 10.257, DE 10 DE JULHO DE 2001.', size=25),
                     ft.Divider(),
-                    ft.Text(value='Código Penal', color=BLUE, size=35),
-                    ft.Text(value='DECRETO-LEI N° 2.848, DE 7 DE DEZEMBRO DE 1940.', size=25),
+                    ft.Text(value='Estatuto de Defesa do Torcedor', color=BLUE, size=35),
+                    ft.Text(value='LEI N° 10.671, DE 15 DE MAIO DE 2003.', size=25),
                     ft.Divider(),
-                    ft.Text(value='Código de Processo Penal', color=BLUE, size=35),
-                    ft.Text(value='DECRETO-LEI N° 3.689, DE 3 DE OUTUBRO DE 1941.', size=25),
+                    ft.Text(value='Estatuto do Desarmamento', color=BLUE, size=35),
+                    ft.Text(value='LEI N° 10.826, DE 22 DE DEZEMBRO DE 2003.', size=25),
                     ft.Divider(),
-                    ft.Text(value='Código Tributário Nacional', color=BLUE, size=35),
-                    ft.Text(value='LEI N° 5.172, DE 25 DE OUTUBRO DE 1966.', size=25),
+                    ft.Text(value='Estatuto do Estrangeiro', color=BLUE, size=35),
+                    ft.Text(value='LEI N° 13.445, DE 24 DE MAIO DE 2017.', size=25),
                     ft.Divider(),
                 ]
             )
         )
     )
 
-    page.add(conteudo)
-
+    page.add(
+        conteudo
+    )
 
 ft.app(target=main)

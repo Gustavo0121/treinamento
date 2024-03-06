@@ -5,6 +5,8 @@ Página de ajuda.
 
 import flet as ft
 
+BLUE = '#0060B5'
+
 
 class Navbar(ft.UserControl):
     def __init__(self):
