@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "treinamento"
-version = "0.0.2a2"
+version = "0.0.2a3"
 description = ""
 authors = ["Gustavo dos Santos Ribeiro <gustavo.ribeiro@presidencia.gov.br>"]
 readme = "README.md"
