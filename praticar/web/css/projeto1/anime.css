@@ -99,7 +99,7 @@
 .titulo_kuroko{
     text-align: center;
     font-size: 70px;
-    color: #f11010;
+    color: #ff2600;
 }
 
 .div_kuroko{
@@ -108,3 +108,22 @@
     margin-bottom: 50px;
 }
 
+.desc_jujutsu{
+    background-color: #97290775;
+    font-family: Papyrus, fantasy;
+    text-align: center;
+    color: rgb(197, 199, 91);
+    font-size: 30px;
+}
+
+.titulo_jujutsu{
+    text-align: center;
+    font-size: 70px;
+    color: #f11010;
+}
+
+.div_jujutsu{
+    border-top: 7px solid #002938;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
