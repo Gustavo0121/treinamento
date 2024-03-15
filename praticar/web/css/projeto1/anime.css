@@ -1,10 +1,3 @@
-body {
-    background-image: url("https://images6.alphacoders.com/131/1315629.png");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
 .avatar{
     border-radius: 50%;
     display: block;
@@ -16,20 +9,20 @@ body {
     border-color: black;
 }
 
-.desc{
+.desc_snk{
     font-family: Papyrus, fantasy;
     text-align: center;
     color: red;
     font-size: 30px;
 }
 
-.titulo{
+.titulo_snk{
     text-align: center;
     font-size: 70px;
     color: #3270cf;
 }
 
-hr{
+.div_snk{
     border-top: 7px solid #c0e1ed;
     margin-top: 50px;
     margin-bottom: 50px;
